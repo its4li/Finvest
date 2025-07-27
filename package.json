@@ -1,0 +1,22 @@
+{
+  "name": "finvest",
+  "version": "1.0.0",
+  "description": "پلتفرم سرمایه‌گذاری هوشمند با اتصال کیف پول",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "live-server ."
+  },
+  "keywords": [
+    "investment",
+    "cryptocurrency",
+    "wallet",
+    "defi",
+    "blockchain"
+  ],
+  "author": "Finvest Team",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
