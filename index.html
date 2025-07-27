@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finvest - پلتفرم سرمایه‌گذاری هوشمند</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>Finvest</h1>
+                    <span class="logo-subtitle">سرمایه‌گذاری هوشمند</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">خانه</a>
+                    <a href="#investments" class="nav-link">سرمایه‌گذاری</a>
+                    <a href="#about" class="nav-link">درباره ما</a>
+                    <a href="#contact" class="nav-link">تماس</a>
+                </div>
+                <div class="wallet-section">
+                    <button id="connectWallet" class="wallet-btn">
+                        <i class="fas fa-wallet"></i>
+                        <span id="walletText">اتصال کیف پول</span>
+                    </button>
+                    <div id="walletInfo" class="wallet-info hidden">
+                        <span id="walletAddress"></span>
+                        <button id="disconnectWallet" class="disconnect-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        آینده سرمایه‌گذاری
+                        <span class="gradient-text">در دستان شماست</span>
+                    </h1>
+                    <p class="hero-description">
+                        با Finvest، بهترین فرصت‌های سرمایه‌گذاری ریالی و دلاری را کشف کنید.
+                        کیف پول خود را متصل کرده و سفر سرمایه‌گذاری هوشمند را آغاز کنید.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            شروع سرمایه‌گذاری
+                        </button>
+                        <button class="btn-secondary">
+                            <i class="fas fa-play"></i>
+                            مشاهده ویدیو
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-cards">
+                        <div class="card card-1">
+                            <i class="fab fa-ethereum"></i>
+                            <span>Ethereum Staking</span>
+                            <div class="profit">+12.5%</div>
+                        </div>
+                        <div class="card card-2">
+                            <i class="fab fa-bitcoin"></i>
+                            <span>Bitcoin Investment</span>
+                            <div class="profit">+8.3%</div>
+                        </div>
+                        <div class="card card-3">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Portfolio Growth</span>
+                            <div class="profit">+15.7%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Categories -->
+        <section id="investments" class="investments">
+            <div class="container">
+                <div class="section-header">
+                    <h2>دسته‌بندی سرمایه‌گذاری‌ها</h2>
+                    <p>بهترین فرصت‌های سرمایه‌گذاری را بر اساس نیاز خود انتخاب کنید</p>
+                </div>
+                
+                <div class="investment-grid">
+                    <!-- Dollar Investments -->
+                    <div class="investment-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h3>سرمایه‌گذاری دلاری</h3>
+                            <p>فرصت‌های سرمایه‌گذاری با ارز دلار</p>
+                        </div>
+                        <div class="category-items">
+                            <div class="investment-item">
+                                <div class="item-icon">
+                                    <i class="fab fa-ethereum"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>استیک اتریوم</h4>
+                                    <p>سود سالانه: 5-12%</p>
+                                    <span class="risk-level low">ریسک پایین</span>
+                                </div>
+                                <button class="invest-btn">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="investment-item">
+                                <div class="item-icon">
+                                    <i class="fab fa-bitcoin"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>سرمایه‌گذاری بیت‌کوین</h4>
+                                    <p>سود متغیر: 8-25%</p>
+                                    <span class="risk-level medium">ریسک متوسط</span>
+                                </div>
+                                <button class="invest-btn">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="investment-item">
+                                <div class="item-icon">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>DeFi Protocols</h4>
+                                    <p>سود سالانه: 10-30%</p>
+                                    <span class="risk-level high">ریسک بالا</span>
+                                </div>
+                                <button class="invest-btn">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="investment-item">
+                                <div class="item-icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>صندوق‌های ETF</h4>
+                                    <p>سود سالانه: 6-15%</p>
+                                    <span class="risk-level low">ریسک پایین</span>
+                                </div>
+                                <button class="invest-btn">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rial Investments -->
+                    <div class="investment-category">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h3>سرمایه‌گذاری ریالی</h3>
+                            <p>فرصت‌های سرمایه‌گذاری با ریال ایران</p>
+                        </div>
+                        <div class="category-items">
+                            <div class="investment-item">
+                                <div class="item-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>املاک و مستغلات</h4>
+                                    <p>سود سالانه: 15-25%</p>
+                                    <span class="risk-level medium">ریسک متوسط</span>
+                                </div>
+                                <button class="invest-btn">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="investment-item">
+                                <div class="item-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>بورس اوراق بهادار</h4>
+                                    <p>سود متغیر: 10-40%</p>
+                                    <span class="risk-level high">ریسک بالا</span>
+                                </div>
+                                <button class="invest-btn">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="investment-item">
+                                <div class="item-icon">
+                                    <i class="fas fa-piggy-bank"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>سپرده‌های بانکی</h4>
+                                    <p>سود سالانه: 18-22%</p>
+                                    <span class="risk-level low">ریسک پایین</span>
+                                </div>
+                                <button class="invest-btn">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="investment-item">
+                                <div class="item-icon">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>طلا و جواهرات</h4>
+                                    <p>سود سالانه: 12-20%</p>
+                                    <span class="risk-level low">ریسک پایین</span>
+                                </div>
+                                <button class="invest-btn">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">$2.5M+</div>
+                        <div class="stat-label">حجم سرمایه‌گذاری</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15,000+</div>
+                        <div class="stat-label">کاربران فعال</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">رضایت کاربران</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">پشتیبانی</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Finvest</h3>
+                    <p>پلتفرم پیشرفته سرمایه‌گذاری با تکنولوژی بلاک‌چین</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>خدمات</h4>
+                    <ul>
+                        <li><a href="#">سرمایه‌گذاری دلاری</a></li>
+                        <li><a href="#">سرمایه‌گذاری ریالی</a></li>
+                        <li><a href="#">مشاوره سرمایه‌گذاری</a></li>
+                        <li><a href="#">تحلیل بازار</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>پشتیبانی</h4>
+                    <ul>
+                        <li><a href="#">مرکز راهنمایی</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#">گزارش مشکل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>قوانین</h4>
+                    <ul>
+                        <li><a href="#">شرایط استفاده</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                        <li><a href="#">قوانین سرمایه‌گذاری</a></li>
+                        <li><a href="#">امنیت</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Finvest. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Wallet Connection Modal -->
+    <div id="walletModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>انتخاب کیف پول</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="wallet-options">
+                    <button class="wallet-option" data-wallet="metamask">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" alt="MetaMask">
+                        <span>MetaMask</span>
+                    </button>
+                    <button class="wallet-option" data-wallet="walletconnect">
+                        <img src="https://docs.walletconnect.com/img/walletconnect-logo.svg" alt="WalletConnect">
+                        <span>WalletConnect</span>
+                    </button>
+                    <button class="wallet-option" data-wallet="coinbase">
+                        <img src="https://images.ctfassets.net/q5ulk4bp65r7/3TBS4oVkD1ghowTqVQJlqj/2dfd4ea3b623a7c0d8deb2ff445dee9e/Consumer_Wordmark.svg" alt="Coinbase">
+                        <span>Coinbase Wallet</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
