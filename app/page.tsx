@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { useAccount } from 'wagmi'
 import { 
@@ -13,7 +13,8 @@ import {
   ArrowRight,
   Star,
   Users,
-  BarChart3
+  BarChart3,
+  X
 } from 'lucide-react'
 import Header from './components/Header'
 import InvestmentCategories from './components/InvestmentCategories'
@@ -21,16 +22,18 @@ import HeroSection from './components/HeroSection'
 import StatsSection from './components/StatsSection'
 import FeaturesSection from './components/FeaturesSection'
 import Footer from './components/Footer'
+import InvestmentModal from './components/InvestmentModal'
 
 export default function Home() {
   const { address, isConnected } = useAccount()
+  const [showInvestmentModal, setShowInvestmentModal] = useState(false)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-dark-950 via-dark-900 to-primary-950">
-      <Header />
+      <Header onInvestmentClick={() => setShowInvestmentModal(true)} />
       
       <main className="relative">
-        <HeroSection />
+        <HeroSection onInvestmentClick={() => setShowInvestmentModal(true)} />
         <StatsSection />
         <FeaturesSection />
         
@@ -97,6 +100,12 @@ export default function Home() {
       </main>
       
       <Footer />
+      
+      {/* Investment Selection Modal */}
+      <InvestmentModal 
+        isOpen={showInvestmentModal} 
+        onClose={() => setShowInvestmentModal(false)} 
+      />
     </div>
   )
 }
