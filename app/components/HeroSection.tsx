@@ -4,7 +4,11 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Shield, Zap } from 'lucide-react'
 import { useAccount } from 'wagmi'
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  onInvestmentClick: () => void
+}
+
+export default function HeroSection({ onInvestmentClick }: HeroSectionProps) {
   const { isConnected } = useAccount()
   
   return (
@@ -47,7 +51,10 @@ export default function HeroSection() {
           >
             {!isConnected ? (
               <>
-                <button className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all transform hover:scale-105 flex items-center gap-3 purple-glow">
+                <button 
+                  onClick={onInvestmentClick}
+                  className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all transform hover:scale-105 flex items-center gap-3 purple-glow"
+                >
                   شروع سرمایه‌گذاری
                   <ArrowRight className="w-5 h-5" />
                 </button>
@@ -59,6 +66,13 @@ export default function HeroSection() {
               <div className="glass-effect rounded-xl p-6 purple-glow">
                 <p className="text-green-400 text-lg font-semibold mb-2">✅ کیف پول متصل شد</p>
                 <p className="text-gray-300">آماده شروع سرمایه‌گذاری هستید</p>
+                <button 
+                  onClick={onInvestmentClick}
+                  className="mt-4 bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg transition-colors flex items-center gap-2 mx-auto"
+                >
+                  مشاهده گزینه‌ها
+                  <ArrowRight className="w-4 h-4" />
+                </button>
               </div>
             )}
           </motion.div>
